@@ -103,4 +103,4 @@ runtime and side-effect controls.
 - Tool isolation using a separate process and OS sandbox.
 - Usage admission estimates before a paid provider request.
 
-[Local verification](docs/VERIFICATION.md) · [Contributing](CONTRIBUTING.md) · [Changelog](CHANGELOG.md) · [MIT license](LICENSE)
+[Local verification](docs/VERIFICATION.md) · [API reference](docs/API.md) · [Contributing](CONTRIBUTING.md) · [Changelog](CHANGELOG.md) · [MIT license](LICENSE)
