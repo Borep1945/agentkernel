@@ -1,0 +1,10 @@
+[limits]
+max_turns = 8
+max_tool_calls = 10
+max_tokens = 8192
+max_context_chars = 32000
+max_cost_usd = 0.25
+# Replace zero with your selected provider's actual USD rates per million tokens.
+input_usd_per_million = 0.0
+output_usd_per_million = 0.0
+provider_timeout = 30.0
