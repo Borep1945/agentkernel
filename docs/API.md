@@ -66,14 +66,18 @@ from agentkernel.runtime import Agent
 from agentkernel.tools import default_registry
 from agentkernel.types import ToolCall, ToolContext, Turn
 
+
 async def demo():
-    provider = ScriptedProvider([
-        Turn('{"steps":["Calculate the expression","Report it"]}'),
-        Turn(calls=(ToolCall("math", "calculate", {"expression": "2 + 2"}),)),
-        Turn("Offline fixture executed calculate."),
-    ])
+    provider = ScriptedProvider(
+        [
+            Turn('{"steps":["Calculate the expression","Report it"]}'),
+            Turn(calls=(ToolCall("math", "calculate", {"expression": "2 + 2"}),)),
+            Turn("Offline fixture executed calculate."),
+        ]
+    )
     agent = Agent(provider, default_registry(), ToolContext(Path.cwd()))
     return await agent.run("Calculate 2 + 2")
+
 
 print(asyncio.run(demo()).answer)
 ```
